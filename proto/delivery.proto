@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+
+option go_package = "delivery/proto";
+
+package delivery_service.v1;
+
+service deliveryService {
+// Delivery
+rpc DeliveryService(InDeliveryRequest) returns (InDeliveryResponse) {}
+}
+
+message InDeliveryRequest {
+  string customer_address = 1;
+  InDeliveryCoordinatesRequest customer_coordinates = 2;
+
+}
+
+message InDeliveryResponse {
+  double delivery_fee = 1;
+}
+
+message InDeliveryCoordinatesRequest {
+  double latitude = 1;
+  double longitude = 2;
+}

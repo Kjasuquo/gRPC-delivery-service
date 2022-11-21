@@ -1,0 +1,11 @@
+.example
+.env
+app.env
+todo.todo
+firestore.json
+.DS_Store
+internal/.DS_Store
+client/.DS_Store
+internal/services/package copy.go
+.idea
+clients
